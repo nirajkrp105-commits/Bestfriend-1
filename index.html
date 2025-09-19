@@ -425,7 +425,25 @@ setInterval(function () {
     var heartArr = document.querySelectorAll(".heart-icon");
     if (heartArr.length > 100) {
       heartArr[0].remove();
-    }
+		
+    }async function aksibalas(){
+  await swals.fire('OK!', 'Send a message to my Telegram!', 'success');
+
+  // Text to copy
+  const textToCopy = "Thank you❤️";
+
+  // Try to copy into clipboard
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+    console.log("Copied to clipboard: " + textToCopy);
+  } catch (err) {
+    console.error("Failed to copy text: ", err);
+  }
+
+  // Redirect to your Telegram
+  window.location = "https://t.me/niraj_ff123";
+  Tombol.style="opacity:1;transform: scale(1)";
+}
 }, 100);
 </script>
 <script src=""></script>
